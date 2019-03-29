@@ -5,6 +5,10 @@
   .intro {
     img {
       border-radius: 5px; //rounded border to match design file.
+      @media @phone {
+        max-width: 500px;
+        width: 100%;
+      }
     }
     h2 {
       padding: 15px;
@@ -20,7 +24,18 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+    @media @phone {
+      .sky {
+        display: none;  //make pic disappear;
+      }
+      .launch {
+        display: none;
+      }
+      .blast {
+        width: 94%;
+        .mobile-aligning(); //using margin to line up with design;
+      }
+    }
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -47,10 +62,17 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    @media @phone {
+      flex-direction: column;
+      .mobile-aligning();
+      padding: 0;
+    }
     .walk-text {
       width: 50%;
-
+      @media @phone {
+        width: 100%;
+        order: 1;
+      }
       h3 {
         margin-bottom: 10px;
       }
@@ -75,11 +97,16 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
-
+      @media @phone {
+        max-width: 500px;
+        width: 98%;
+        margin-top: 10px;
+        margin-left: 0;  //had to use different margins than other photos to line up with design.
+      }
       img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
+        border-radius: 12px;
       }
     }
   }

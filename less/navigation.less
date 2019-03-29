@@ -12,6 +12,9 @@
     padding-top: 15px;  //added to move down spacewalkers.
     padding-bottom: 15px;  // added to move down anchor tags.
     font-family: @river-bend;
+    @media @phone {
+      .mobile-header-align();  //lining up SpaceWalers with design;
+    }
   }
   .nav {
     width: 380px;
@@ -22,6 +25,10 @@
       text-decoration: none;  //removed text-decoration.
       font-family: @river-bend;
       color: @ebony-clay;
+      @media @phone {
+        .mobile-header-align();
+      }
+
 
       &:hover {
         transform: scale(1.2); //my animations for hovering.
@@ -30,3 +37,4 @@
   }
 
 }
+//
