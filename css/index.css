@@ -160,6 +160,34 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.topNav {
+  Width: 100%;
+  background: #F6F6F6;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.topNav h1 {
+  font-size: 4rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: #454A59;
+}
+.topNav .nav {
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+}
+.topNav .nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-family: #454A59;
+  color: #23293B;
+}
+.topNav .nav a:hover {
+  transform: scale(1.2);
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
