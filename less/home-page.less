@@ -1,9 +1,38 @@
 // Home Content
 
 .home {
+  .sign-up {
+    font-size: 4rem;
+    margin-left: 13%;
+    margin-bottom: 7%;
+    margin-top: 5%;
+  }
+  .input {
+    width: 200px;
+    height: 40px;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    font-size: 2.4rem;
+    color: lightgray;
+    border: 2px solid black;
+  }
+  .input-state {
+    width: 200px;
+    margin-left: 5%;
+  }
+  .input-zip {
+    width: 200px;
+    margin-bottom: 15%;
+  }
 
   .intro {
-
+    img {
+      border-radius: 5px; //rounded border to match design file.
+      @media @phone {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
     h2 {
       padding: 15px;
     }
@@ -11,14 +40,25 @@
     p {
       padding:0 15px;
     }
-  
+
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+    @media @phone {
+      .sky {
+        display: none;  //make pic disappear;
+      }
+      .launch {
+        display: none;
+      }
+      .blast {
+        width: 94%;
+        .mobile-aligning(); //using margin to line up with design;
+      }
+    }
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -45,12 +85,22 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    @media @phone {
+      flex-direction: column;
+      .mobile-aligning();
+      padding: 0;
+    }
     .walk-text {
       width: 50%;
-
+      @media @phone {
+        width: 100%;
+        order: 1;
+      }
       h3 {
         margin-bottom: 10px;
+        @media @phone {
+          margin-top: 40px; //used to line up text..
+        }
       }
 
       p {
@@ -58,17 +108,40 @@
       }
 
       .btn {
+        .custom-button(35px, 100px,5px, 7px);
+        .main-button();
+
+        @media @phone {
+          .custom-button(70px, 98%, 5px, 0);
+          padding-top: 25px; //using to line up Sign up in button.
+          margin-bottom: 20px;
+        }
+        &:hover {
+          background: white;  //switch background and color in hover state;
+          color: @shuttle-gray;
+          transform: scale(1.3); //added scale to make look better.
+          border: 1px solid @shuttle-gray; // added border to make button appearance stay.
+
+          @media @phone {
+            transform: scale(1.1); //reduced scale to make look better.
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+      @media @phone {
+        max-width: 500px;
+        width: 98%;
+        margin-top: 5px;
+        margin-left: 0;  //had to use different margins than other photos to line up with design.
+      }
       img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
+        border-radius: 12px;
       }
     }
   }

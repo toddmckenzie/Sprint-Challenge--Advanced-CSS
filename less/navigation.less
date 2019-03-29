@@ -1,1 +1,40 @@
 // Navigation code here
+
+.topNav {
+  Width: 100%;
+  background: @wild-sand;    //background color, don't see a border in design
+  height: 100px;    // height matches.
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-size: 4rem;
+    padding-top: 15px;  //added to move down spacewalkers.
+    padding-bottom: 15px;  // added to move down anchor tags.
+    font-family: @river-bend;
+    @media @phone {
+      .mobile-header-align();  //lining up SpaceWalers with design;
+    }
+  }
+  .nav {
+    width: 380px;
+    display: flex;    //displayed flex so could space between;
+    justify-content: space-between;
+    a {
+      font-size: 1.6rem; //font size to match design.
+      text-decoration: none;  //removed text-decoration.
+      font-family: @river-bend;
+      color: @ebony-clay;
+      @media @phone {
+        .mobile-header-align();
+      }
+
+
+      &:hover {
+        transform: scale(1.2); //my animations for hovering.
+      }
+    }
+  }
+
+}
+//
