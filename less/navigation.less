@@ -2,29 +2,29 @@
 
 .topNav {
   Width: 100%;
-  background: @wild-sand;
-  height: 100px;
+  background: @wild-sand;    //background color, don't see a border in design
+  height: 100px;    // height matches.
   display: flex;
   align-items: center;
   flex-direction: column;
   h1 {
     font-size: 4rem;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 15px;  //added to move down spacewalkers.
+    padding-bottom: 15px;  // added to move down anchor tags.
     font-family: @river-bend;
   }
   .nav {
     width: 380px;
-    display: flex;
+    display: flex;    //displayed flex so could space between;
     justify-content: space-between;
     a {
-      font-size: 1.6rem;
-      text-decoration: none;
+      font-size: 1.6rem; //font size to match design.
+      text-decoration: none;  //removed text-decoration.
       font-family: @river-bend;
       color: @ebony-clay;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.2); //my animations for hovering.
       }
     }
   }
